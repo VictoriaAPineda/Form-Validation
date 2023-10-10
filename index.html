@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation Practice</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="sideImage">
+        <div id="text-banner">
+            <img src="images/odin-lined.png" alt=""><h1>Odin</h1>
+        </div>
+
+        <div id="credit">
+            <p id="caption_txt">Photo by Linus Nylund on Unsplash</p>
+
+        </div>
+        
+    </div>
+
+    <div id="formSide">
+
+            <p id="info_text">This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams.
+            Sign up now to get started. <br><br>You <em>know</em> you want to.</p>
+
+        <div>     
+   
+            <form class="OdinForm">
+               
+                <div id="left-side">
+                    <!-- <caption>Let's do this!</caption> -->
+                    <label for="fName">First Name</label>
+                    <input type="text" id="fName" required>
+                    <div id="fName_error_msg" class="error"></div>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" >
+
+
+                    <label for="pwd">Password</label>
+                    <input type="password" class="error" id="pwd" >
+                </div>
+                <div id="right-side">
+                    <label for="lName">Last Name</label>
+                    <input type="text" id="lName" required>
+                    <div id="lName_error_msg" class="error"></div>
+
+
+                    <label for="phone">Phone Number</label>
+                    <input type="text" id="phone" >     
+    
+
+                    <label for="confirmPwd">Confirm Password</label>
+                    <input type="password" class="error" id="confirmPwd" required>
+                </div>
+            </form>
+
+            <div id="submission_area">
+                <button id="createAcct_btn" onclick = "validateFunction()" type="button">Create Account</button>
+                <p>Already have an account? <a href="#">Log in</a></p>
+            </div>
+        </div>
+        </form>
+    </div>
+
+
+    <script src="index.js"></script>
+</body>
+</html>

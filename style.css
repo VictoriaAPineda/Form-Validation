@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+
+
+}
+@font-face{ 
+    font-family: 'OdinFont';
+    src: url('resources/Norse-Bold.otf') format('opentype');
+}
+body{
+    display: flex;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+    width: 100%;
+
+}
+
+#sideImage{
+    background-image: url("images/sunrise.jpg");
+    background-size: cover;
+    color: white;
+   
+
+  
+
+}
+#text-banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    position: relative;
+    top: 20%;
+    padding: 10px 0px;
+}
+#text-banner h1{
+    font-size: 60px;
+    text-transform: uppercase;
+    font-family: 'OdinFont', Arial;
+}
+#text-banner img{
+    width: min(100px, 50%);
+}
+#credit{
+    position: absolute;
+    top: 95%;
+    left: 20%;
+    transform: translate(-50%, -50%);     
+}
+#credit #caption_txt{
+    font-size: 12px;
+}
+
+#formSide{
+    background-color: rgb(248, 248, 248);
+    width: 60%;
+}
+
+#info_text{
+    padding: 70px 0px;
+    margin-left: 60px;
+    margin-right: 60px;
+    font-weight: 600;
+    font-size: 20px;
+}
+#formSide form{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    background-color: white;
+    padding: 30px 60px;
+    gap: 50px;
+    box-shadow: 0px 5px 5px rgb(221, 221, 221);
+}
+
+#formSide form label{
+    display: block;
+    text-transform: uppercase;
+    color: rgb(97, 97, 97);
+    font-size: 13px;
+   
+}
+
+#formSide form input{
+    border: 1px black solid; /* need to fix - clashes with error class */
+    width: 200px;
+    margin: 5px 0px 5px 0px;
+    border-radius: 3px;
+}
+
+.error{
+   color: red;
+}
+
+#submission_area{
+    margin: 30px 60px;
+}
+#submission_area a{
+    color: rgb(162, 153, 222);
+}
+
+#createAcct_btn{
+    padding: 10px 30px;
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(162, 153, 222);
+    border: none;
+
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+#createAcct_btn:hover{
+    box-shadow: 0px 5px 5px rgb(199, 199, 199);
+}
+#createAcct_btn:active{
+    background-color: white;
+    color: rgb(162, 153, 222);
+}
