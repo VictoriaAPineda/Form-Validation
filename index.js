@@ -25,7 +25,7 @@ function validateFunction(){
     // Tests true if only contains alphabetical characters OR is empty(*)
     let nameRegex = /^[a-zA-Z]*$/;
     // "Error specific" message will not display if input is empty because
-    // there is not input to examine. 
+    // there is no input to examine. 
     if (nameRegex.test(firstNameEl)) {
         firstNameErrorEl.textContent = ""; // removes error if user fixed it.   
     } else {
