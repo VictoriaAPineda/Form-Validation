@@ -46,6 +46,9 @@ function validateFunction(){
         emailErrorEl.textContent = "Please enter a valid email format.";
     }
 
+    // [4] Check phone number 
+
+    // [5] Check and compare passwords
 
   
   
