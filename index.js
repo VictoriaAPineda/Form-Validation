@@ -1,5 +1,4 @@
-// check for empty input boxes
-// check for each criteria
+
 function validateFunction(){
 
     // Get input from form elements
