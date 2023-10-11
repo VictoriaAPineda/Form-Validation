@@ -10,21 +10,23 @@ function validateFunction(){
     const passwordEl = document.querySelector("#pwd").value;
     const confirmPasswordEl = document.querySelector("#confirmPwd").value;
 
-    // Error pop ups
+    // Error pop ups locations
     const firstNameErrorEl = document.querySelector("#fName_error_msg");
     const lastNameErrorEl = document.querySelector("#lName_error_msg");
+    const emailErrorEl = document.querySelector("#email_error_msg");
 
-    // Tests true if only contains alphabetical characters OR is empty(*)
-    // "Error specific" message will not display if input is empty because
-    // there is not input to examine. 
-    let nameRegex = /^[a-zA-Z]*$/;
+ 
     
-    // [1] Checks for any empty fields [done]
+    // [1] Checks for any empty fields 
     if(firstNameEl == "" || lastNameEl == "" || emailEl == "" || phoneEl == "" || passwordEl == "" || confirmPasswordEl == "") {
         window.alert("Please fill out all input boxes in order to submit.");
     } 
 
     // [2] Check Names - accepts only letter characters
+    // Tests true if only contains alphabetical characters OR is empty(*)
+    let nameRegex = /^[a-zA-Z]*$/;
+    // "Error specific" message will not display if input is empty because
+    // there is not input to examine. 
     if (nameRegex.test(firstNameEl)) {
         firstNameErrorEl.textContent = ""; // removes error if user fixed it.   
     } else {
@@ -34,6 +36,15 @@ function validateFunction(){
         lastNameErrorEl.textContent = "";
     } else {
         lastNameErrorEl.textContent = "* Please enter only letters";
+    }
+
+    // [3] Check for correct email format
+    // username + @(domain name.) + domain ending <- ends with 2-4 characters(ex: com / net)
+    let emailRegex = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})*$/;
+    if(emailRegex.test(emailEl)){
+        emailErrorEl.textContent = "";
+    }else{
+        emailErrorEl.textContent = "Please enter a valid email format.";
     }
 
 
