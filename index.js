@@ -47,10 +47,17 @@ function validateFunction(){
     }
 
     // [4] Check phone number 
+    // Clean up input in case of (), -, and spaces
+    let cleanPhoneNumber = phoneEl.replaceAll(/[()\s-]/g,"");
+    // Check that input only contains numbers
+    let numOnlyRegex = /^\d+$/;
+    if (numOnlyRegex.test(cleanPhoneNumber)) {
+        console.log("All Numbers");
+    } else {
+        console.log("Has non-Numbers");
+    }
 
     // [5] Check and compare passwords
 
-  
-  
 
 }
