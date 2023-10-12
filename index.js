@@ -2,7 +2,6 @@
 function validateFunction(){
 
     // Get input from form elements
-    const formEL = document.querySelector("OdinForm");
     const firstNameEl = document.querySelector("#fName").value;
     const lastNameEl = document.querySelector("#lName").value;
     const emailEl = document.querySelector("#email").value;
@@ -66,5 +65,9 @@ function validateFunction(){
         passwordErrorEl.textContent = "*Passwords do not match"
     }
 
-   
+}
+
+// Clears out form
+function resetForm(){
+
 }
