@@ -13,6 +13,7 @@ function validateFunction(){
     const firstNameErrorEl = document.querySelector("#fName_error_msg");
     const lastNameErrorEl = document.querySelector("#lName_error_msg");
     const emailErrorEl = document.querySelector("#email_error_msg");
+    const phoneErrorEl = document.querySelector("#phone_error_msg");
 
  
     
@@ -43,7 +44,7 @@ function validateFunction(){
     if(emailRegex.test(emailEl)){
         emailErrorEl.textContent = "";
     }else{
-        emailErrorEl.textContent = "Please enter a valid email format.";
+        emailErrorEl.textContent = "Please enter a valid email format";
     }
 
     // [4] Check phone number 
@@ -52,9 +53,9 @@ function validateFunction(){
     // Check that input only contains numbers
     let numOnlyRegex = /^\d+$/;
     if (numOnlyRegex.test(cleanPhoneNumber)) {
-        console.log("All Numbers");
+        phoneErrorEl.textContent = "";
     } else {
-        console.log("Has non-Numbers");
+        phoneErrorEl.textContent = "Please type only numbers"
     }
 
     // [5] Check and compare passwords
