@@ -2,6 +2,7 @@
 function validateFunction(){
 
     // Get input from form elements
+    const formEL = document.querySelector("OdinForm");
     const firstNameEl = document.querySelector("#fName").value;
     const lastNameEl = document.querySelector("#lName").value;
     const emailEl = document.querySelector("#email").value;
@@ -14,9 +15,8 @@ function validateFunction(){
     const lastNameErrorEl = document.querySelector("#lName_error_msg");
     const emailErrorEl = document.querySelector("#email_error_msg");
     const phoneErrorEl = document.querySelector("#phone_error_msg");
+    const passwordErrorEl = document.querySelector("#password_error_msg");
 
- 
-    
     // [1] Checks for any empty fields 
     if(firstNameEl == "" || lastNameEl == "" || emailEl == "" || phoneEl == "" || passwordEl == "" || confirmPasswordEl == "") {
         window.alert("Please fill out all input boxes in order to submit.");
@@ -54,17 +54,17 @@ function validateFunction(){
     let numOnlyRegex = /^(\d)*$/;
     if (numOnlyRegex.test(cleanPhoneNumber)) {
         phoneErrorEl.textContent = "";
+   
     } else {
         phoneErrorEl.textContent = "*Please type only numbers"
     }
 
     // [5] Check and compare passwords
-    console.log(passwordEl + " "+confirmPasswordEl)
     if(passwordEl ===  confirmPasswordEl){
-        console.log("same");
+        passwordErrorEl.textContent = "";
     }else{
-        console.log("different");
+        passwordErrorEl.textContent = "*Passwords do not match"
     }
 
-
+   
 }
