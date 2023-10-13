@@ -84,13 +84,11 @@ function validateFunction(){
     // All tests pass?
     if(emptyFieldsTest == false && firstNameTest == true && lastNameTest == true && emailTest == true && phoneTest == true && passwordTest == true){
         allTestsPassed = true;
-        //
+        // User clicked "Cancel" or "Ok"
         let accept = window.confirm("Account succesffuly created!"); // 
         if(accept == true){
             resetForm();
-        }
-    
-          
+        }          
     }
 }
 
