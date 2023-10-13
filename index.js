@@ -40,14 +40,19 @@ function validateFunction(){
     if (nameRegex.test(firstNameEl)) {
         firstNameErrorEl.textContent = ""; // removes error if user fixed it. 
         firstNameTest = true  
+        document.querySelector("#fName").classList.remove("error-box");
+      
     } else {
         firstNameErrorEl.textContent = "* Please enter only letters";
+        document.querySelector("#fName").classList.add("error-box");
     }
     if (nameRegex.test(lastNameEl)) {
         lastNameErrorEl.textContent = "";
         lastNameTest = true;
+        document.querySelector("#lName").classList.remove("error-box");
     } else {
         lastNameErrorEl.textContent = "* Please enter only letters";
+        document.querySelector("#lName").classList.add("error-box");
     }
 
     // [3] Check for correct email format
@@ -56,8 +61,10 @@ function validateFunction(){
     if(emailRegex.test(emailEl)){
         emailErrorEl.textContent = "";
         emailTest = true;
+        document.querySelector("#email").classList.remove("error-box");
     }else{
         emailErrorEl.textContent = "Please enter a valid email format";
+        document.querySelector("#email").classList.add("error-box");
     }
 
     // [4] Check phone number 
@@ -68,24 +75,30 @@ function validateFunction(){
     if (numOnlyRegex.test(cleanPhoneNumber)) {
         phoneErrorEl.textContent = "";
         phoneTest = true;
+        document.querySelector("#phone").classList.remove("error-box");
    
     } else {
-        phoneErrorEl.textContent = "*Please type only numbers"
+        phoneErrorEl.textContent = "*Please type only numbers";
+        document.querySelector("#phone").classList.add("error-box");
     }
 
     // [5] Check and compare passwords
     if(passwordEl ===  confirmPasswordEl){
         passwordErrorEl.textContent = "";
         passwordTest = true;
+        document.querySelector("#pwd").classList.remove("error-box");
+        document.querySelector("#confirmPwd").classList.remove("error-box");
     }else{
-        passwordErrorEl.textContent = "*Passwords do not match"
+        passwordErrorEl.textContent = "*Passwords do not match";
+        document.querySelector("#pwd").classList.add("error-box");
+        document.querySelector("#confirmPwd").classList.add("error-box");
     }
 
     // All tests pass?
     if(emptyFieldsTest == false && firstNameTest == true && lastNameTest == true && emailTest == true && phoneTest == true && passwordTest == true){
         allTestsPassed = true;
         // User clicked "Cancel" or "Ok"
-        let accept = window.confirm("Account succesffuly created!"); // 
+        let accept = window.confirm("Account succesffuly created!"); 
         if(accept == true){
             resetForm();
         }          

@@ -83,7 +83,7 @@ body{
 }
 
 #formSide form input{
-    border: 1px black solid; /* need to fix - clashes with error class */
+    border: 1px black solid; 
     width: 200px;
     margin: 5px 0px 5px 0px;
     border-radius: 3px;
@@ -91,6 +91,9 @@ body{
 
 .error{
    color: red;
+}
+.error-box{
+    border: 2px red solid !important;
 }
 
 #submission_area{
